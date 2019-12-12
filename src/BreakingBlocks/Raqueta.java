@@ -31,7 +31,7 @@ public class Raqueta {
 
         BufferedImage imagenR = null;
         try {
-            imagenR = ImageIO.read(new File("src/Imagenes/raqueta.png"));
+            imagenR = ImageIO.read(new File("src/Imagenes/Raqueta.png"));
         } catch (IOException ex) {
             Logger.getLogger(Bola.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -61,7 +61,6 @@ public class Raqueta {
         if(tecla == KeyEvent.VK_RIGHT){//se da cuando el codigo de la tecla es igual a la tecla de la derecha
             
             xDirRaqueta = 5;
-            System.out.println("derecha");
         }  
     }
     

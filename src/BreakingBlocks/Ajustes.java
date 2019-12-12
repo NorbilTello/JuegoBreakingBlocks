@@ -108,8 +108,7 @@ public class Ajustes extends javax.swing.JDialog {
     }//GEN-LAST:event_botonDificilActionPerformed
 
     private void botonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresarActionPerformed
-        
-        System.out.println("REGRESE");
+
         this.dispose();
     }//GEN-LAST:event_botonRegresarActionPerformed
 

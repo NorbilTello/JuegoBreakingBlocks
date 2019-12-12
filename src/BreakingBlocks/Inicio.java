@@ -101,7 +101,7 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAjustesActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
-        System.out.println("sali");
+        
         this.dispose();
     }//GEN-LAST:event_botonSalirActionPerformed
 

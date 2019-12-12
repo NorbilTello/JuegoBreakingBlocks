@@ -48,7 +48,7 @@ public class Bola {
         
         BufferedImage imagenB = null;
         try {
-            imagenB = ImageIO.read(new File("src/Imagenes/bola.png"));
+            imagenB = ImageIO.read(new File("src/Imagenes/Bola.png"));
         } catch (IOException ex) {
             Logger.getLogger(Bola.class.getName()).log(Level.SEVERE, null, ex);
         }
