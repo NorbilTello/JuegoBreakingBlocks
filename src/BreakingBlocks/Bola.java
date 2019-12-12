@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package DestruccionDeLadrillos;
+
+package BreakingBlocks;
 
 import java.awt.Image;
 import java.awt.Rectangle;
@@ -13,10 +9,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-/**
- *
- * @author Norbil
- */
+
 public class Bola {
     
     Image imagenBola;
@@ -28,15 +21,17 @@ public class Bola {
     private int yVida;
     public static int ANCHO_IMAGEN;
     public static int ALTURA_IMAGEN;
+    private boolean bolaDesaparecida;
     
     public Bola(){
         
-        xDirBola = 2;
-        yDirBola = -2;
+        xDirBola = 4;
+        yDirBola = -4;
         
         cargarImagen();
         dimensionImagen();
         restablecerEstado();
+        bolaDesaparecida = true;
     }
     
     public Bola(int xVida, int yVida){
@@ -65,10 +60,10 @@ public class Bola {
         return imagenBola;
     }
     
-    private void dimensionImagen(){
-        ANCHO_IMAGEN = 14;
-        ALTURA_IMAGEN = 14;
-    
+    void dimensionImagen(){
+        
+        ANCHO_IMAGEN = 12;
+        ALTURA_IMAGEN = 12;
     }
     
     void movimientoBola(){
@@ -77,13 +72,16 @@ public class Bola {
         y += yDirBola; //posición y de la bola(da la apariencia de movimiento, tiene diferente opciones para moverse)
         
         if(x <= 0){
+            
             setXDir(-xDirBola); //cuando se choca con la pared izqueida para mover la bola hacia la derecha
         } 
         if(x >= Ventana.ANCHO_VENTANA - ANCHO_IMAGEN-15){
+            
             setXDir(-xDirBola); //cuando se choca con la pared derecha para mover la bola hacia la izquierda
         }
         
         if(y <= 0){
+            
             setYDir(-yDirBola); //cuando se choca con el techo para mover la bola hacia abajo
         }
     }
@@ -91,7 +89,17 @@ public class Bola {
     void restablecerEstado(){ //se vuelve a la posición original de la bola
         
         x = 275;
-        y = 536;     
+        y = 548;     
+    }
+    
+    void setBolaDesaparecida(boolean val){
+        
+        bolaDesaparecida = val;
+    }
+    
+    boolean getBolaDesaparecida(){
+        
+        return bolaDesaparecida;
     }
     
     public void setX(int x){
@@ -122,6 +130,10 @@ public class Bola {
     void setYDir(int yDirBola) {
 
         this.yDirBola = yDirBola;
+    }
+    
+    int getXDir(){
+        return xDirBola;
     }
     
     int getYDir(){
